@@ -1,5 +1,5 @@
 <template>
-    <button tabindex="0" class="btn flex items-center justify-center" :class="'color-'+type" :disabled="disabled">
+    <button tabindex="0" class="btn w-auto flex items-center justify-center" :class="'color-'+type + ' ' + 'size-'+size" :disabled="disabled">
         <div v-if="hasIcon" class="h-full aspect-square flex items-center justify-center"></div>
         <span v-if="label" class="text-base font-semibold">{{ label }}</span>
     </button>
@@ -12,6 +12,10 @@ export default {
         hasIcon: {
             type: Boolean,
             default: false
+        },
+        size: {
+            type: String,
+            default: "default"
         },
         type: {
             type: String,
@@ -32,7 +36,6 @@ export default {
 <style scoped>
 .btn {
     position: relative;
-    padding: 10px 1rem;
     border-radius: 32px;
     pointer-events: none;
 
@@ -49,7 +52,7 @@ export default {
 .btn:not(:disabled):focus::before {
     position: absolute;
     content: "";
-    z-index: -1;
+    pointer-events: none;
     top: 0;
     left: 0;
     width: 100%;
@@ -59,6 +62,27 @@ export default {
     outline-width: 2px;
     outline-offset: 2px;
     border-radius: 32px;
+}
+
+/* Size */
+.btn.size-default {
+    height: 44px;
+    padding: 10px 1rem;
+}
+
+.btn.size-default span {
+    font-size: 1rem;
+    line-height: calc(1.5 / 1);
+}
+
+.btn.size-min {
+    height: 36px;
+    padding: 6px 12px;
+}
+
+.btn.size-min span {
+    font-size: .75rem;
+    line-height: calc(1 / .75rem);
 }
 
 /* Primary */

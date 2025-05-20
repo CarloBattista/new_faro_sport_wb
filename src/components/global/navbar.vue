@@ -11,19 +11,26 @@
         </div>
         <div class="relative z-[10] flex lg:px-[16px] gap-[24px] items-center justify-end">
             <a href="tel:+393284339795">
-                <button-pr :hasIcon="false" type="primary" label="Prenota" :disabled="false" />
+                <button-pr :hasIcon="false" :size="store.isMobile ? 'min' : 'default'" type="primary" label="Prenota" :disabled="false" />
             </a>
         </div>
     </div>
 </template>
 
 <script>
+import { store } from "../../data/store";
+
 import buttonPr from '../button/button-pr.vue';
 
 export default {
     name: "navbar",
     components: {
         buttonPr
+    },
+    data() {
+        return {
+            store
+        }
     }
 }
 </script>

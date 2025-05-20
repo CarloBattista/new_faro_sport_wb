@@ -3,7 +3,23 @@
     <main class="relative z-[1] w-full">
         <hero :home="true" text="" heroImage="/_resources/images/image_01.webp" />
         <map-section />
-        <!-- TO DO: ADD SECTION GALLERY -->
+        <section class="w-full py-10 lg:px-[90px] px-8 flex flex-col gap-4 items-center justify-center">
+            <div class="w-full text-center flex items-center justify-start">
+                <h3 class="text-black text-2xl font-bold">Galleria</h3>
+            </div>
+            <div class="w-full h-[450px] lg:max-h-[450px] grid lg:grid-cols-2 grid-cols-1 gap-2.5">
+                <div class="w-full h-full rounded-l-none lg:rounded-l-2xl rounded-tl-2xl lg:rounded-tr-none rounded-tr-2xl bg-red-500"></div>
+                <div class="relative w-full h-full grid grid-cols-2 gap-2.5">
+                    <div class="w-full h-full lg:rounded-bl-none rounded-bl-2xl bg-blue-500"></div>
+                    <div class="w-full h-full lg:rounded-tr-2xl rounded-tr-none lg:rounded-br-none rounded-br-2xl bg-green-500"></div>
+                    <div class="w-full h-full lg:block hidden bg-yellow-500"></div>
+                    <div class="w-full h-full lg:block hidden rounded-br-2xl bg-purple-500"></div>
+                    <div class="absolute bottom-2.5 right-2.5">
+                        <button-pr :hasIcon="false" :size="store.isMobile ? 'min' : 'default'" type="secondary" label="Mostra tutte le foto" :disabled="false" />
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- TO DO: ADD SECTION STRUCTURE -->
         <section class="w-full py-10 flex flex-col gap-[50px] items-center justify-center">
             <div class="w-full px-4 text-center flex items-center justify-center">
@@ -45,6 +61,8 @@
 </template>
 
 <script>
+import { store } from "../data/store";
+
 import navbar from "../components/global/navbar.vue"
 import hero from "../components/global/hero.vue"
 import mapSection from "../components/section/map-section.vue"
@@ -69,6 +87,11 @@ export default {
         MapPinned,
         CircleParking,
         LifeBuoy
+    },
+    data() {
+        return {
+            store
+        }
     },
     mounted() {
         window.scrollTo(0, 0);
