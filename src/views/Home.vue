@@ -1,12 +1,18 @@
 <template>
-    <div>
-        <h1 class="text-3xl font-bold text-red-600">Home test push github</h1>
-    </div>
+    <navbar />
+    <hero :home="true" />
 </template>
 
 <script>
+import navbar from "../components/global/navbar.vue"
+import hero from "../components/global/hero.vue"
+
 export default {
-    name: "Home"
+    name: "Home",
+    components: {
+        navbar,
+        hero
+    }
 }
 </script>
 
