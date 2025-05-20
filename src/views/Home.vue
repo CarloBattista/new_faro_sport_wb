@@ -2,7 +2,6 @@
     <navbar />
     <main class="relative z-[1] w-full">
         <hero :home="true" text="" heroImage="/_resources/images/image_01.webp" />
-        <map-section />
         <section class="w-full py-10 lg:px-[90px] px-8 flex flex-col gap-4 items-center justify-center">
             <div class="w-full text-center flex items-center justify-start">
                 <h3 class="text-black text-2xl font-bold">Galleria</h3>
@@ -21,6 +20,7 @@
             </div>
         </section>
         <!-- TO DO: ADD SECTION STRUCTURE -->
+        <map-section />
         <section class="w-full py-10 flex flex-col gap-[50px] items-center justify-center">
             <div class="w-full px-4 text-center flex items-center justify-center">
                 <h3 class="text-black text-2xl font-bold">Indicazioni</h3>
