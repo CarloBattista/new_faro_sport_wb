@@ -40,6 +40,9 @@ export default {
         hero,
         buttonPr,
         contentInfo,
+    },
+    mounted() {
+        window.scrollTo(0, 0);
     }
 }
 </script>
