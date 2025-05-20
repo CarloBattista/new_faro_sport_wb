@@ -1,6 +1,8 @@
 <template>
     <button tabindex="0" class="btn w-auto flex items-center justify-center" :class="'color-'+type + ' ' + 'size-'+size" :disabled="disabled">
-        <div v-if="hasIcon" class="h-full aspect-square flex items-center justify-center"></div>
+        <div v-if="hasIcon" class="h-full flex items-center justify-center">
+            <slot name="icon"></slot>
+        </div>
         <span v-if="label" class="text-base font-semibold">{{ label }}</span>
     </button>
 </template>

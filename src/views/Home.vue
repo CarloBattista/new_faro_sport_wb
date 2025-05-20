@@ -7,12 +7,12 @@
                 <h3 class="text-black text-2xl font-bold">Galleria</h3>
             </div>
             <div class="w-full h-[450px] lg:max-h-[450px] grid lg:grid-cols-2 grid-cols-1 gap-2.5">
-                <div class="w-full h-full rounded-l-none lg:rounded-l-2xl rounded-tl-2xl lg:rounded-tr-none rounded-tr-2xl bg-red-500"></div>
+                <div class="card-image w-full h-full rounded-l-none lg:rounded-l-2xl rounded-tl-2xl lg:rounded-tr-none rounded-tr-2xl"></div>
                 <div class="relative w-full h-full grid grid-cols-2 gap-2.5">
-                    <div class="w-full h-full lg:rounded-bl-none rounded-bl-2xl bg-blue-500"></div>
-                    <div class="w-full h-full lg:rounded-tr-2xl rounded-tr-none lg:rounded-br-none rounded-br-2xl bg-green-500"></div>
-                    <div class="w-full h-full lg:block hidden bg-yellow-500"></div>
-                    <div class="w-full h-full lg:block hidden rounded-br-2xl bg-purple-500"></div>
+                    <div class="card-image w-full h-full lg:rounded-bl-none rounded-bl-2xl"></div>
+                    <div class="card-image w-full h-full lg:rounded-tr-2xl rounded-tr-none lg:rounded-br-none rounded-br-2xl"></div>
+                    <div class="card-image w-full h-full lg:block hidden"></div>
+                    <div class="card-image w-full h-full lg:block hidden rounded-br-2xl"></div>
                     <div class="absolute bottom-2.5 right-2.5">
                         <button-pr :hasIcon="false" :size="store.isMobile ? 'min' : 'default'" type="secondary" label="Mostra tutte le foto" :disabled="false" />
                     </div>
@@ -58,6 +58,8 @@
         </section>
     </main>
     <contentInfo />
+
+    <modalGallery />
 </template>
 
 <script>
@@ -68,6 +70,7 @@ import hero from "../components/global/hero.vue"
 import mapSection from "../components/section/map-section.vue"
 import cardInfo from "../components/card/card-info.vue"
 import buttonPr from '../components/button/button-pr.vue';
+import modalGallery from '../components/modal/modal-gallery.vue';
 import contentInfo from '../components/global/content-info.vue';
 
 // ICONS
@@ -81,6 +84,7 @@ export default {
         mapSection,
         cardInfo,
         buttonPr,
+        modalGallery,
         contentInfo,
 
         // ICONS
@@ -99,4 +103,30 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.card-image {
+    position: relative;
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-image::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .15);
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.card-image:hover::before {
+    opacity: 1;
+}
+</style>
