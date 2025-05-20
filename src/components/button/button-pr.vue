@@ -39,7 +39,7 @@ export default {
     border-radius: 32px;
     pointer-events: none;
 
-    transition-property: background-color;
+    transition-property: transform, background-color;
     transition-duration: 300ms;
     transition-timing-function: ease;
 }
@@ -62,6 +62,10 @@ export default {
     outline-width: 2px;
     outline-offset: 2px;
     border-radius: 32px;
+}
+
+.btn:active {
+    transform: scale(0.96);
 }
 
 /* Size */
