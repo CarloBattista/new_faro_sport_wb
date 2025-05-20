@@ -71,6 +71,19 @@ export default {
     background-color: #224EC8;
 }
 
+/* Outline Primary */
+.btn.color-outline-primary {
+    background-color: transparent;
+    border: 2px solid #2D60F9;
+    color: #2D60F9;
+}
+
+.btn.color-outline-primary:hover {
+    background-color: rgba(45, 96, 249, .1);
+    border: 2px solid #2D60F9;
+    color: #2D60F9;
+}
+
 /* Secondary */
 .btn.color-secondary {
     background-color: #fff;
@@ -80,4 +93,11 @@ export default {
 .btn.color-secondary:hover {
     background-color: #f0f0f0;
 }
+
+/* Inline Text */
+.btn.color-inline-text {
+    background-color: transparent;
+    color: #2D60F9;
+}
+
 </style>
