@@ -39,6 +39,7 @@
             </div>
         </section>
     </main>
+    <contentInfo />
 </template>
 
 <script>
@@ -47,6 +48,7 @@ import hero from "../components/global/hero.vue"
 import mapSection from "../components/section/map-section.vue"
 import cardInfo from "../components/card/card-info.vue"
 import buttonPr from '../components/button/button-pr.vue';
+import contentInfo from '../components/global/content-info.vue';
 
 // ICONS
 import { MapPinned, CircleParking, LifeBuoy } from 'lucide-vue-next';
@@ -59,6 +61,7 @@ export default {
         mapSection,
         cardInfo,
         buttonPr,
+        contentInfo,
 
         // ICONS
         MapPinned,
