@@ -10,7 +10,9 @@
             </RouterLink>
         </div>
         <div class="relative z-[10] flex lg:px-[16px] gap-[24px] items-center justify-end">
-            <button-pr :hasIcon="false" type="primary" label="Prenota" :disabled="false" />
+            <a href="tel:+393284339795">
+                <button-pr :hasIcon="false" type="primary" label="Prenota" :disabled="false" />
+            </a>
         </div>
     </div>
 </template>

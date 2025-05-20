@@ -1,7 +1,7 @@
 <template>
     <navbar />
     <main class="relative z-[1] w-full">
-        <hero :home="true" />
+        <hero :home="true" text="" heroImage="/_resources/images/image_01.webp" />
         <map-section />
         <section class="w-full py-10 flex flex-col gap-[50px] items-center justify-center">
             <div class="w-full px-4 text-center flex items-center justify-center">

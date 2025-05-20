@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 // General
 import Home from '../views/Home.vue';
+import Contacts from '../views/Contacts.vue';
 
 const masterTitlePage = "New Faro Sport";
 
@@ -12,6 +13,13 @@ const routes = [
         path: '/',
         name: 'home',
         component: Home,
+        props: true,
+        meta: { title: `${masterTitlePage}` }
+    },
+    {
+        path: '/contacts',
+        name: 'contacts',
+        component: Contacts,
         props: true,
         meta: { title: `${masterTitlePage}` }
     },
