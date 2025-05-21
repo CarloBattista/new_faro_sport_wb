@@ -30,6 +30,19 @@ export default {
   },
   beforeUnmount() {
     window.removeEventListener('resize', this.checkIsMobile);
+  },
+  watch: {
+    'store.isGalleryOpen': {
+      handler(value) {
+        if (value) {
+          document.body.classList.add('overflow-hidden');
+        } else {
+          document.body.classList.remove('overflow-hidden');
+        }
+      },
+      immediate: true,
+      deep: true
+    }
   }
 }
 </script>

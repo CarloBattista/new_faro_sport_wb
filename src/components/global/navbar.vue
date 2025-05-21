@@ -1,5 +1,6 @@
 <template>
-    <div class="navbar fixed z-[500] top-0 left-0 w-full max-h-[80px] lg:h-[80px] h-[55px] lg:px-[32px] px-[16px] flex items-center justify-between">
+    <div class="navbar fixed z-[500] top-0 left-0 w-full max-h-[80px] lg:h-[80px] h-[55px] lg:px-[32px] px-[16px] flex items-center justify-between"
+        :class="{ 'navbar-scrolled': isScrolled }">
         <div class="relative z-[10] flex lg:px-[16px] gap-[24px] items-center justify-start">
             <RouterLink to="/contacts" class="navItem lg:text-base text-sm">Contatti</RouterLink>
         </div>
@@ -11,7 +12,8 @@
         </div>
         <div class="relative z-[10] flex lg:px-[16px] gap-[24px] items-center justify-end">
             <a href="tel:+393284339795">
-                <button-pr :hasIcon="false" :size="store.isMobile ? 'min' : 'default'" type="primary" label="Prenota" :disabled="false" />
+                <button-pr :hasIcon="false" :size="store.isMobile ? 'min' : 'default'" type="primary" label="Prenota"
+                    :disabled="false" />
             </a>
         </div>
     </div>
@@ -29,13 +31,41 @@ export default {
     },
     data() {
         return {
-            store
+            store,
+
+            isScrolled: false
         }
+    },
+    methods: {
+        handleScroll() {
+            if (window.scrollY > 1) {
+                this.isScrolled = true;
+            } else {
+                this.isScrolled = false;
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+
+        window.addEventListener("scroll", this.handleScroll);
+    },
+    beforeUnmount() {
+        window.removeEventListener("scroll", this.handleScroll);
     }
 }
 </script>
 
 <style scoped>
+.navbar {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+
+    transition-property: background-color, backdrop-filter;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+}
+
 .navbar::before {
     position: absolute;
     z-index: -1;
@@ -47,6 +77,11 @@ export default {
     background: #000000;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
     opacity: .7;
+}
+
+.navbar.navbar-scrolled {
+    background-color: rgba(0, 0, 0, .6);
+    backdrop-filter: blur(15px);
 }
 
 .navItem {
