@@ -1,0 +1,120 @@
+.splide {
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+}
+
+.splide__track {
+    height: 100%;
+    overflow: visible;
+}
+
+.splide__list {
+    align-items: center;
+}
+
+.splide__slide {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Arrows */
+.splide__arrow--prev,
+.splide__arrow--next {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, .4);
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition-property: background-color;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+}
+
+.splide__arrow--prev:hover,
+.splide__arrow--next:hover {
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.splide__arrow--prev {
+    left: 1rem;
+}
+
+.splide__arrow--next {
+    right: 1rem;
+}
+
+.splide__arrow--prev,
+.splide__arrow--next {
+    height: calc(4rem - 1rem);
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.splide__arrow--prev svg,
+.splide__arrow--next svg {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.splide__arrow--prev::before,
+.splide__arrow--next::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.splide__arrow--prev::before {
+    background-image: url("/_resources/icons/svgs/chevron_left_icon.svg");
+}
+
+.splide__arrow--next::before {
+    background-image: url("/_resources/icons/svgs/chevron_right_icon.svg");
+}
+
+/* Pagination */
+.splide__pagination {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    width: 100%;
+    padding: 0 4rem;
+    display: flex;
+    gap: .3rem;
+    align-items: center;
+}
+
+.splide__pagination li {
+    position: relative;
+    height: 12px;
+    aspect-ratio: 1;
+}
+
+.splide__pagination li .splide__pagination__page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.splide__pagination li .splide__pagination__page.is-active {
+    background-color: rgba(0, 0, 0, 1);
+}
