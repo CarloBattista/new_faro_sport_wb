@@ -1,5 +1,5 @@
 <template>
-    <section class="relative w-full py-28 lg:px-[90px] px-8 flex lg:flex-row flex-col gap-[50px] items-start bg-black">
+    <section class="relative w-full py-28 lg:px-[90px] px-8 flex lg:flex-row flex-col gap-[50px] items-start bg-black overflow-x-hidden">
         <div class="block-head lg:left-[calc(90px+110px)] left-8 lg:block hidden"></div>
         <div class="relative z-30 w-full max-w-[300px] text-center flex items-center justify-start">
             <h3 class="text-white text-2xl font-bold">Strutture</h3>
