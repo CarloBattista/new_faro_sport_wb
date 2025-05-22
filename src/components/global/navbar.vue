@@ -11,7 +11,7 @@
             </RouterLink>
         </div>
         <div class="relative z-[10] flex lg:px-[16px] gap-[24px] items-center justify-end">
-            <a href="tel:+393284339795">
+            <a :href="`tel:${store.phone}`">
                 <button-pr :hasIcon="false" :size="store.isMobile ? 'min' : 'default'" type="primary" label="Prenota"
                     :disabled="false" />
             </a>

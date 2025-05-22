@@ -7,7 +7,7 @@
                 <div class="w-full flex flex-col gap-8">
                     <h3 class="text-black text-2xl font-bold">Come possiamo aiutarti?</h3>
                     <p>Se hai bisogno di aiuto contattaci al numero <strong>(+39) 328 433 9795.</strong></p>
-                    <a href="tel:+393284339795">
+                    <a :href="`tel:${store.phone}`">
                         <button-pr class="w-fit min-w-[170px]" :hasIcon="false" type="primary" label="Chiamaci" :disabled="false" />
                     </a>
                 </div>
@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import { store } from "../data/store";
+
 import navbar from "../components/global/navbar.vue"
 import hero from "../components/global/hero.vue"
 import buttonPr from '../components/button/button-pr.vue';
@@ -40,6 +42,11 @@ export default {
         hero,
         buttonPr,
         contentInfo,
+    },
+    data() {
+        return {
+            store
+        }
     },
     mounted() {
         window.scrollTo(0, 0);

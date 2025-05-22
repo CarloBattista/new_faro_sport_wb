@@ -11,7 +11,7 @@
                     <h2 class="text-white text-3xl font-bold uppercase">{{ data?.title }}</h2>
                     <p class="text-white text-base font-normal break-all">{{ data?.description }}</p>
                 </div>
-                <a href="tel:+393886494200">
+                <a :href="`tel:${store.phone}`">
                     <button-pr class="w-fit min-w-[170px]" :hasIcon="false" size="default" type="primary" :label="data?.coming_soon ? 'In arrivo' : 'Prenota ora'" :disabled="data?.coming_soon" />
                 </a>
             </div>
