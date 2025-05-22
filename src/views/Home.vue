@@ -59,10 +59,6 @@
         </section>
     </main>
     <contentInfo />
-
-    <Transition name="slide-fade">
-        <modalGallery v-if="store.isGalleryOpen" />
-    </Transition>
 </template>
 
 <script>
@@ -73,7 +69,6 @@ import hero from "../components/global/hero.vue"
 import mapSection from "../components/section/map-section.vue"
 import cardInfo from "../components/card/card-info.vue"
 import buttonPr from '../components/button/button-pr.vue';
-import modalGallery from '../components/modal/modal-gallery.vue';
 import structureSection from '../components/section/structure-section.vue';
 import contentInfo from '../components/global/content-info.vue';
 
@@ -88,7 +83,6 @@ export default {
         mapSection,
         cardInfo,
         buttonPr,
-        modalGallery,
         structureSection,
         contentInfo,
 
@@ -133,19 +127,6 @@ export default {
 
 .card-image:hover::before {
     opacity: 1;
-}
-
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-  transition-property: transform, opacity;
-  transition-duration: 200ms;
-  transition-timing-function: ease;
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateY(20px);
-  opacity: 0;
 }
 
 .cr-image-one {
