@@ -5,9 +5,9 @@
             <h3 class="text-white text-2xl font-bold">Strutture</h3>
         </div>
         <div class="carousel-structures relative z-10 w-full h-full">
-            <Splide :options="options" aria-label="Gallery images">
-                <SplideSlide v-for="(structure, structureIndex) in store.structures" :key="structureIndex">
-                    <cardStructure :data="structure" v-if="structure.visible" />
+            <Splide :options="options">
+                <SplideSlide v-for="(structure, structureIndex) in store.structures.filter(s => s.visible)" :key="structureIndex">
+                    <cardStructure :data="structure" />
                 </SplideSlide>
             </Splide>
         </div>
@@ -47,7 +47,7 @@ export default {
                 768: {
                     perPage: 1,
                     perMove: 1,
-                }
+                },
             }
         };
 
