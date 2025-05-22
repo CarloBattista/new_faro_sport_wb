@@ -1,10 +1,12 @@
 <template>
+  <Analytics />
   <div>
     <RouterView />
   </div>
 </template>
 
 <script>
+import { Analytics } from "@vercel/analytics/vue";
 import { store } from "./data/store";
 
 export default {
