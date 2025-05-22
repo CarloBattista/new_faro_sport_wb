@@ -3,26 +3,26 @@
     <main class="relative z-[1] w-full">
         <hero :home="true" text="" heroImage="/_resources/images/image_01.webp" />
         <structureSection />
-        <section class="w-full py-10 lg:px-[90px] px-8 flex flex-col gap-4 items-center justify-center">
+        <section id="gallerySection" class="w-full py-10 lg:px-[90px] px-8 flex flex-col gap-4 items-center justify-center">
             <div class="w-full text-center flex items-center justify-start">
                 <h3 class="text-black text-2xl font-bold">Galleria</h3>
             </div>
             <div class="w-full h-[450px] lg:max-h-[450px] grid lg:grid-cols-2 grid-cols-1 gap-2.5">
-                <div class="card-image cr-image-one w-full h-full rounded-l-none lg:rounded-l-2xl rounded-tl-2xl lg:rounded-tr-none rounded-tr-2xl" @click="store.isGalleryOpen = true"></div>
+                <div class="card-image cr-image-one w-full h-full rounded-l-none lg:rounded-l-2xl rounded-tl-2xl lg:rounded-tr-none rounded-tr-2xl" @click="openGallery(0)"></div>
                 <div class="relative w-full h-full grid grid-cols-2 gap-2.5">
-                    <div class="card-image cr-image-two w-full h-full lg:rounded-bl-none rounded-bl-2xl" @click="store.isGalleryOpen = true"></div>
-                    <div class="card-image cr-image-three w-full h-full lg:rounded-tr-2xl rounded-tr-none lg:rounded-br-none rounded-br-2xl" @click="store.isGalleryOpen = true"></div>
-                    <div class="card-image cr-image-four w-full h-full lg:block hidden" @click="store.isGalleryOpen = true"></div>
-                    <div class="card-image cr-image-five w-full h-full lg:block hidden rounded-br-2xl" @click="store.isGalleryOpen = true"></div>
+                    <div class="card-image cr-image-two w-full h-full lg:rounded-bl-none rounded-bl-2xl" @click="openGallery(1)"></div>
+                    <div class="card-image cr-image-three w-full h-full lg:rounded-tr-2xl rounded-tr-none lg:rounded-br-none rounded-br-2xl" @click="openGallery(2)"></div>
+                    <div class="card-image cr-image-four w-full h-full lg:block hidden" @click="openGallery(6)"></div>
+                    <div class="card-image cr-image-five w-full h-full lg:block hidden rounded-br-2xl" @click="openGallery(8)"></div>
                     <div class="absolute bottom-2.5 right-2.5">
-                        <button-pr :hasIcon="false" :size="store.isMobile ? 'min' : 'default'" type="secondary" label="Mostra tutte le foto" :disabled="false" @click="store.isGalleryOpen = true" />
+                        <button-pr :hasIcon="false" :size="store.isMobile ? 'min' : 'default'" type="secondary" label="Mostra tutte le foto" :disabled="false" @click="openGallery(0)" />
                     </div>
                 </div>
             </div>
         </section>
         <!-- TO DO: ADD SECTION STRUCTURE -->
         <map-section />
-        <section class="w-full py-10 flex flex-col gap-[50px] items-center justify-center">
+        <section id="directionSection" class="w-full py-10 flex flex-col gap-[50px] items-center justify-center">
             <div class="w-full px-4 text-center flex items-center justify-center">
                 <h3 class="text-black text-2xl font-bold">Indicazioni</h3>
             </div>
@@ -94,6 +94,12 @@ export default {
     data() {
         return {
             store
+        }
+    },
+    methods: {
+        openGallery(index) {
+            store.isGalleryOpen = true;
+            store.galleryIndex = index;
         }
     },
     mounted() {

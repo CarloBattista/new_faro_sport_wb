@@ -2,7 +2,7 @@
     <div class="fixed z-[99999] top-0 left-0 w-full h-svh bg-white">
         <div class="relative z-20 top-0 left-0 w-full h-[60px] max-h-[60px] px-8 flex items-center justify-between bg-white">
             <button-pr :hasIcon="false" size="min" type="primary" label="Indietro" :disabled="false"
-                @click="store.isGalleryOpen = false">
+                @click="closeGallery">
                 <template #icon>
                     <ChevronLeft size="20" />
                 </template>
@@ -46,8 +46,15 @@ export default {
             store
         }
     },
+    methods: {
+        closeGallery() {
+            store.isGalleryOpen = false;
+            store.galleryIndex = 0;
+        }
+    },
     setup() {
         const options = {
+            start: store.galleryIndex,
             perPage: 1,
             perMove: 1,
             rewind: false,

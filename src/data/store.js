@@ -5,6 +5,7 @@ export const store = reactive({
 
     isMobile: false,
     isGalleryOpen: false,
+    galleryIndex: 0,
 
     images: [
         {

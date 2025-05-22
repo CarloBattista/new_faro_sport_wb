@@ -3,7 +3,7 @@
   <SpeedInsights />
   <div>
     <popup v-if="false" />
-    <RouterView v-if="!store.isGalleryOpen" />
+    <RouterView />
     <Transition name="slide-fade">
         <modalGallery v-if="store.isGalleryOpen" />
     </Transition>
