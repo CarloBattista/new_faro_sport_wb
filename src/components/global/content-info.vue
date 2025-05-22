@@ -7,7 +7,7 @@
                     <p class="foo-item text-sm font-medium">Contatti</p>
                 </RouterLink>
             </div>
-            <div class="w-[280px] max-w-[280px] flex flex-col gap-[6px]">
+            <div v-if="false" class="w-[280px] max-w-[280px] flex flex-col gap-[6px]">
                 <h2 class="foo-title text-xl font-bold uppercase">Privacy & Cookie</h2>
                 <RouterLink to="/contacts">
                     <p class="foo-item text-sm font-medium">Privacy</p>
