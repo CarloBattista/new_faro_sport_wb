@@ -2,6 +2,7 @@
     <navbar />
     <main class="relative z-[1] w-full">
         <hero :home="true" text="" heroImage="/_resources/images/image_01.webp" />
+        <structureSection />
         <section class="w-full py-10 lg:px-[90px] px-8 flex flex-col gap-4 items-center justify-center">
             <div class="w-full text-center flex items-center justify-start">
                 <h3 class="text-black text-2xl font-bold">Galleria</h3>
@@ -73,6 +74,7 @@ import mapSection from "../components/section/map-section.vue"
 import cardInfo from "../components/card/card-info.vue"
 import buttonPr from '../components/button/button-pr.vue';
 import modalGallery from '../components/modal/modal-gallery.vue';
+import structureSection from '../components/section/structure-section.vue';
 import contentInfo from '../components/global/content-info.vue';
 
 // ICONS
@@ -87,6 +89,7 @@ export default {
         cardInfo,
         buttonPr,
         modalGallery,
+        structureSection,
         contentInfo,
 
         // ICONS

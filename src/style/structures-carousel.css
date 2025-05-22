@@ -1,0 +1,7 @@
+.carousel-structures .splide {
+    padding: 0;
+}
+
+.carousel-structures .splide__track {
+    overflow: visible;
+}
