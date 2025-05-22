@@ -89,7 +89,7 @@
 /* Pagination */
 .splide__pagination {
     position: absolute;
-    bottom: 1rem;
+    bottom: 3rem;
     left: 0;
     width: 100%;
     padding: 0 4rem;
