@@ -2,10 +2,10 @@
     <div class="navbar fixed z-[500] top-0 left-0 w-full max-h-[80px] lg:h-[80px] h-[55px] lg:px-[32px] px-[16px] flex items-center justify-between"
         :class="{ 'navbar-scrolled': isScrolled }">
         <div class="relative z-[10] flex lg:px-[16px] gap-[24px] items-center justify-start">
-            <RouterLink to="/contacts" class="navItem lg:text-base text-sm">Contatti</RouterLink>
+            <RouterLink to="/contacts" name="contacts" aria-label="Contatti" class="navItem lg:text-base text-sm">Contatti</RouterLink>
         </div>
         <div class="absolute z-[5] top-0 left-0 w-full h-full flex items-center justify-center pointer-none:">
-            <RouterLink to="/">
+            <RouterLink to="/" name="home" aria-label="Home">
                 <div class="nfs-logo full w-[170px] h-[44px] pointer-events-auto hidden lg:block"></div>
                 <div class="nfs-logo mob h-[32px] aspect-square pointer-events-auto block lg:hidden"></div>
             </RouterLink>
@@ -102,10 +102,10 @@ export default {
 }
 
 .nfs-logo.full {
-    background-image: url("/_resources/NewFaroSport-TextLogo-White-RGB.png");
+    background-image: url("/_resources/NewFaroSport-TextLogo-White-RGB.webp");
 }
 
 .nfs-logo.mob {
-    background-image: url("/_resources/NewFaroSport-Logo-White-RGB.png");
+    background-image: url("/_resources/NewFaroSport-Logo-White-RGB.webp");
 }
 </style>

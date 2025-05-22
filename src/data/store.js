@@ -64,7 +64,7 @@ export const store = reactive({
             id: 0,
             title: "⚽ Calcio a 7",
             description: "Realizzato con erba sintetica di ultima generazione e dotato di un’illuminazione professionale, garantisce comfort e prestazioni ideali sia di giorno che di sera.",
-            hero_image: "image_11.webp",
+            hero_image: "card_structure_soccer.webp",
             coming_soon: false,
             visible: true
         },
@@ -72,7 +72,7 @@ export const store = reactive({
             id: 1,
             title: "🎾 Padel",
             description: "Mettiamo a disposizione 3 campi da padel di ultima generazione, con copertura durante il periodo invernale, così da garantire gioco e divertimento anche nei mesi più freddi.",
-            hero_image: "image_09.webp",
+            hero_image: "card_structure_padel.webp",
             coming_soon: false,
             visible: true
         },
@@ -80,7 +80,7 @@ export const store = reactive({
             id: 2,
             title: "⚽ Calcio a 11",
             description: "Una struttura moderna, pensata per garantire spazio, qualità e adrenalina agli appassionati del grande calcio.",
-            hero_image: "image_03.webp",
+            hero_image: "",
             coming_soon: true,
             visible: false
         }

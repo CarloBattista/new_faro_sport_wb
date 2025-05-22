@@ -3,7 +3,7 @@
         <div class="relative z-10 w-full h-full">
             <div class="absolute linear-vignette z-[3] top-0 left-0 w-full h-full opacity-70"></div>
             <div class="absolute block-vignette z-[2] top-0 left-0 w-full h-full bg-black/20"></div>
-            <img :src="`/_resources/images/${data?.hero_image}`" alt="Struttura" class="w-full h-full object-cover" loading="lazy">
+            <img :src="`/_resources/images/${data?.hero_image}`" :alt="data?.title" class="w-full h-full object-cover" loading="lazy">
         </div>
         <div class="absolute z-20 top-0 left-0 w-full h-full px-6">
             <div class="w-full h-full flex flex-col gap-11 justify-center">

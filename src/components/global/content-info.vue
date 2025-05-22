@@ -1,23 +1,23 @@
 <template>
     <div class="relative w-full flex flex-col">
         <div class="w-full px-8 py-11 flex gap-6 flex-wrap bg-black text-white">
-            <ul class="w-[280px] max-w-[280px] flex flex-col gap-[6px]">
-                <li class="foo-title text-xl font-bold uppercase">Naviga</li>
+            <div class="w-[280px] max-w-[280px] flex flex-col gap-[6px]">
+                <h2 class="foo-title text-xl font-bold uppercase">Naviga</h2>
                 <RouterLink to="/contacts">
-                    <li class="foo-item text-sm font-medium">Contatti</li>
+                    <p class="foo-item text-sm font-medium">Contatti</p>
                 </RouterLink>
-            </ul>
-            <ul class="w-[280px] max-w-[280px] flex flex-col gap-[6px]">
-                <li class="foo-title text-xl font-bold uppercase">Privacy & Cookie</li>
+            </div>
+            <div class="w-[280px] max-w-[280px] flex flex-col gap-[6px]">
+                <h2 class="foo-title text-xl font-bold uppercase">Privacy & Cookie</h2>
                 <RouterLink to="/contacts">
-                    <li class="foo-item text-sm font-medium">Privacy</li>
+                    <p class="foo-item text-sm font-medium">Privacy</p>
                 </RouterLink>
                 <RouterLink to="/contacts">
-                    <li class="foo-item text-sm font-medium">Cookie</li>
+                    <p class="foo-item text-sm font-medium">Cookie</p>
                 </RouterLink>
-            </ul>
-            <ul class="w-[280px] max-w-[280px] flex flex-col gap-[6px]">
-                <li class="foo-title text-xl font-bold uppercase">Seguici su</li>
+            </div>
+            <div class="w-[280px] max-w-[280px] flex flex-col gap-[6px]">
+                <h2 class="foo-title text-xl font-bold uppercase">Seguici su</h2>
                 <div class="flex gap-[6px] items-center">
                     <a class="relative h-6 aspect-square flex items-center justify-center cursor-pointer"
                         target="_blank" href="https://www.facebook.com/profile.php?id=100063539144589">
@@ -34,7 +34,7 @@
                         </svg>
                     </a>
                 </div>
-            </ul>
+            </div>
         </div>
         <div class="w-full h-[45px] px-8 py-2.5 bg-[#151515] flex items-center justify-center">
             <p class="text-[#909090] text-xs font-normal text-center">&copy; {{ CURRENT_YEAR }} New Faro Sport. Tutti i diritti riservati</p>

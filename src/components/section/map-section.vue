@@ -1,7 +1,7 @@
 <template>
     <div class="relative w-full lg:h-[650px] h-[350px] aspect-video overflow-hidden">
         <div id="canvas-for-googlemap" class="w-full h-full" frameborder="0">
-            <iframe class="w-full h-full" :src="BASE_URL+'?q='+PLACE+'&key='+KEY"></iframe>
+            <iframe title="Google Maps New Faro Sport" class="w-full h-full" :src="BASE_URL+'?q='+PLACE+'&key='+KEY"></iframe>
         </div>
     </div>
 </template>
