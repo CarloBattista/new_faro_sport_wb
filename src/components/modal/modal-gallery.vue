@@ -8,7 +8,7 @@
                 </template>
             </button-pr>
         </div>
-        <div class="fixed z-10 top-0 left-0 w-full h-screen max-h-screen">
+        <div class="fixed z-10 top-0 left-0 w-full h-full">
             <div class="w-full h-full">
                 <Splide :options="options" aria-label="Gallery images">
                     <SplideSlide v-for="(image, imageIndex) in store.images" :key="imageIndex">

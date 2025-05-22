@@ -20,8 +20,7 @@
                 </div>
             </div>
         </section>
-        <!-- TO DO: ADD SECTION STRUCTURE -->
-        <map-section v-if="!store.isGalleryOpen" />
+        <map-section />
         <section id="directionSection" class="w-full py-10 flex flex-col gap-[50px] items-center justify-center">
             <div class="w-full px-4 text-center flex items-center justify-center">
                 <h3 class="text-black text-2xl font-bold">Indicazioni</h3>
