@@ -1,5 +1,5 @@
 <template>
-    <div class="relative z-10 w-full bg-black" style="height: 100svh;">
+    <div class="relative z-10 w-full h-svh bg-black">
         <div class="absolute z-[5] top-0 left-0 w-full h-full lg:px-[90px] px-[32px] flex items-center">
             <h2 class="text-white lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-bold break-all">
                 <p v-if="home">Sport.<br>Passione.<br>Divertimento.</p>
