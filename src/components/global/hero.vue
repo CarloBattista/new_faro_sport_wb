@@ -7,7 +7,7 @@
             </h2>
         </div>
         <div class="hero-bg relative z-[2] w-full h-full">
-            <img :src="heroImage" alt="hero bg" loading="eager" rel="preload" class="w-full h-full object-cover">
+            <img :src="heroImage" alt="hero bg" loading="eager" rel="preload" class="w-full h-full object-cover object-[95%_50%]">
         </div>
         <div class="absolute z-[7] bottom-5 left-0 w-full flex items-center justify-center">
             <div class="scroll-down h-11 aspect-square flex items-center justify-center" :class="{ animate: isAnimating }">

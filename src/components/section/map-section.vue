@@ -13,7 +13,7 @@ export default {
         return {
             BASE_URL: "https://www.google.com/maps/embed/v1/place",
             KEY: "AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8",
-            PLACE: "via anello di san cataldo, 74122 taranto ta" // Via+Anello+di+San+Cataldo,+74122+Taranto+TA
+            PLACE: "new faro sport,via anello di san cataldo, 74122 taranto ta" // new+faro+sport,+Via+Anello+di+San+Cataldo,+74122+Taranto+TA
         }
     }
 }
