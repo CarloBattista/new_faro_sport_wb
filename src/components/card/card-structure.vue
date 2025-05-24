@@ -9,7 +9,7 @@
             <div class="w-full h-full flex flex-col gap-11 justify-center">
                 <div class="flex flex-col gap-1">
                     <h2 class="text-white text-3xl font-bold uppercase">{{ data?.title }}</h2>
-                    <p class="text-white text-base font-normal break-all">{{ data?.description }}</p>
+                    <p class="text-white text-base font-normal" style="word-break: auto-phrase;">{{ data?.description }}</p>
                 </div>
                 <a :href="`tel:${store.phone}`">
                     <button-pr class="w-fit min-w-[170px]" :hasIcon="false" size="default" type="primary" :label="data?.coming_soon ? 'In arrivo' : 'Prenota ora'" :disabled="data?.coming_soon" />
