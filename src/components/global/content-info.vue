@@ -36,8 +36,9 @@
                 </div>
             </div>
         </div>
-        <div class="w-full h-[45px] px-8 py-2.5 bg-[#151515] flex items-center justify-center">
+        <div class="w-full min-h-[45px] px-8 py-2.5 bg-[#151515] flex flex-col gap-1 items-center justify-center">
             <p class="text-[#909090] text-xs font-normal text-center">&copy; {{ CURRENT_YEAR }} New Faro Sport. Tutti i diritti riservati</p>
+            <p class="text-[#909090] text-xs font-normal text-center opacity-70">Sito creato da <a class="border-b" target="_blank" href="https://www.linkedin.com/in/carlo-battista-05b926282/">Carlo Battista</a></p>
         </div>
     </div>
 </template>
