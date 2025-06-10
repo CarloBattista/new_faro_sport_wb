@@ -41,7 +41,7 @@
                         <CircleParking size="36" stroke-width="1.5" />
                     </template>
                     <template #cta>
-                        <button-pr style="cursor: default; pointer-events: none;" :hasIcon="false" type="inline-text" label="Dispnibili" :disabled="false" />
+                        <button-pr style="cursor: default; pointer-events: none;" :hasIcon="false" type="inline-text" label="Disponibili" :disabled="false" />
                     </template>
                 </card-info>
                 <card-info title="Aiuto">
