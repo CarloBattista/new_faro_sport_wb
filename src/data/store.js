@@ -57,7 +57,52 @@ export const store = reactive({
             id: 9,
             src: "image_10.webp",
             alt: "Image 10"
-        }
+        },
+        {
+            id: 10,
+            src: "image_11.webp",
+            alt: "Image 11"
+        },
+        {
+            id: 11,
+            src: "image_12.webp",
+            alt: "Image 12"
+        },
+        {
+            id: 12,
+            src: "image_13.webp",
+            alt: "Image 13"
+        },
+        {
+            id: 13,
+            src: "image_14.webp",
+            alt: "Image 14"
+        },
+        {
+            id: 14,
+            src: "image_15.webp",
+            alt: "Image 15"
+        },
+        {
+            id: 15,
+            src: "image_16.webp",
+            alt: "Image 16"
+        },
+        {
+            id: 16,
+            src: "image_17.webp",
+            alt: "Image 17"
+        },
+        {
+            id: 17,
+            src: "image_18.webp",
+            alt: "Image 18"
+        },
+        {
+            id: 18,
+            src: "image_19.webp",
+            alt: "Image 19"
+        },
     ],
 
     structures: [

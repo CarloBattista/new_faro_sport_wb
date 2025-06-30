@@ -7,10 +7,10 @@
                 <h3 class="text-black text-2xl font-bold">Galleria</h3>
             </div>
             <div class="w-full h-[450px] lg:max-h-[450px] grid lg:grid-cols-2 grid-cols-1 gap-2.5">
-                <div class="card-image cr-image-one w-full h-full rounded-l-none lg:rounded-l-2xl rounded-tl-2xl lg:rounded-tr-none rounded-tr-2xl" @click="openGallery(0)"></div>
+                <div class="card-image cr-image-one w-full h-full rounded-l-none lg:rounded-l-2xl rounded-tl-2xl lg:rounded-tr-none rounded-tr-2xl" @click="openGallery(13)"></div>
                 <div class="relative w-full h-full grid grid-cols-2 gap-2.5">
                     <div class="card-image cr-image-two w-full h-full lg:rounded-bl-none rounded-bl-2xl" @click="openGallery(1)"></div>
-                    <div class="card-image cr-image-three w-full h-full lg:rounded-tr-2xl rounded-tr-none lg:rounded-br-none rounded-br-2xl" @click="openGallery(2)"></div>
+                    <div class="card-image cr-image-three w-full h-full lg:rounded-tr-2xl rounded-tr-none lg:rounded-br-none rounded-br-2xl" @click="openGallery(14)"></div>
                     <div class="card-image cr-image-four w-full h-full lg:block hidden" @click="openGallery(6)"></div>
                     <div class="card-image cr-image-five w-full h-full lg:block hidden rounded-br-2xl" @click="openGallery(8)"></div>
                     <div class="absolute bottom-2.5 right-2.5">
@@ -135,7 +135,7 @@ export default {
 }
 
 .cr-image-one {
-    background-image: url('/_resources/images/image_01.webp');
+    background-image: url('/_resources/images/image_14.webp');
 }
 
 .cr-image-two {
@@ -143,7 +143,7 @@ export default {
 }
 
 .cr-image-three {
-    background-image: url('/_resources/images/image_03.webp');
+    background-image: url('/_resources/images/image_15.webp');
 }
 
 .cr-image-four {
