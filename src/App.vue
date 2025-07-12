@@ -5,32 +5,32 @@
     <popup v-if="false" />
     <RouterView />
     <Transition name="slide-fade">
-        <modalGallery v-if="store.isGalleryOpen" />
+      <modalGallery v-if="store.isGalleryOpen" />
     </Transition>
   </div>
 </template>
 
 <script>
-import { Analytics } from "@vercel/analytics/vue";
-import { SpeedInsights } from "@vercel/speed-insights/vue";
+import { Analytics } from '@vercel/analytics/vue';
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 
-import { store } from "./data/store";
+import { store } from './data/store';
 
-import popup from "./components/popup/popup.vue";
+import popup from './components/popup/popup.vue';
 import modalGallery from './components/modal/modal-gallery.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Analytics,
     SpeedInsights,
     popup,
-    modalGallery
+    modalGallery,
   },
   data() {
     return {
-      store
-    }
+      store,
+    };
   },
   methods: {
     checkIsMobile() {
@@ -39,7 +39,7 @@ export default {
       } else {
         this.store.isMobile = false;
       }
-    }
+    },
   },
   mounted() {
     this.checkIsMobile();
@@ -59,10 +59,10 @@ export default {
         }
       },
       immediate: true,
-      deep: true
-    }
-  }
-}
+      deep: true,
+    },
+  },
+};
 </script>
 
 <style>
