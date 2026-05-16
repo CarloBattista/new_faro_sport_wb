@@ -6,6 +6,16 @@
         <RouterLink to="/contacts">
           <p class="foo-item text-sm font-medium">Contatti</p>
         </RouterLink>
+        <a
+          href="https://new-faro-sport-bnb-wb.vercel.app/"
+          name="BNB"
+          aria-label="BNB"
+          target="_blank"
+          class="foo-item text-sm font-medium flex items-top"
+        >
+          BNB
+          <ArrowUpRight size="14" />
+        </a>
       </div>
       <div v-if="false" class="w-[280px] max-w-[280px] flex flex-col gap-[6px]">
         <h2 class="foo-title text-xl font-bold uppercase">Privacy & Cookie</h2>
@@ -58,8 +68,15 @@
 </template>
 
 <script>
+// ICONS
+import { ArrowUpRight } from 'lucide-vue-next';
+
 export default {
   name: 'content-info',
+  components: {
+    // ICONS
+    ArrowUpRight,
+  },
   data() {
     return {
       CURRENT_YEAR: new Date().getFullYear(),
