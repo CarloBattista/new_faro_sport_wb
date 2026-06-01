@@ -5,6 +5,16 @@
   >
     <div class="relative z-[10] flex lg:px-[16px] gap-[24px] items-center justify-start">
       <RouterLink to="/contacts" name="contacts" aria-label="Contatti" class="navItem lg:text-base text-sm">Contatti</RouterLink>
+      <a
+        href="https://new-faro-sport-bnb-wb.vercel.app/"
+        name="BNB"
+        aria-label="BNB"
+        target="_blank"
+        class="navItem lg:text-base text-sm flex items-top"
+      >
+        BNB
+        <ArrowUpRight size="16" />
+      </a>
     </div>
     <div class="absolute z-[5] top-0 left-0 w-full h-full flex items-center justify-center pointer-none:">
       <RouterLink to="/" name="home" aria-label="Home">
@@ -25,10 +35,16 @@ import { store } from '../../data/store';
 
 import buttonPr from '../button/button-pr.vue';
 
+// ICONS
+import { ArrowUpRight } from 'lucide-vue-next';
+
 export default {
   name: 'navbar',
   components: {
     buttonPr,
+
+    // ICONS
+    ArrowUpRight,
   },
   data() {
     return {
