@@ -5,13 +5,7 @@
   >
     <div class="relative z-[10] flex lg:px-[16px] gap-[24px] items-center justify-start">
       <RouterLink to="/contacts" name="contacts" aria-label="Contatti" class="navItem lg:text-base text-sm">Contatti</RouterLink>
-      <a
-        href="https://new-faro-sport-bnb-wb.vercel.app/"
-        name="BNB"
-        aria-label="BNB"
-        target="_blank"
-        class="navItem lg:text-base text-sm flex items-top"
-      >
+      <a href="https://www.newfarosportbnb.it/" name="BNB" aria-label="BNB" target="_blank" class="navItem lg:text-base text-sm flex items-top">
         BNB
         <ArrowUpRight size="16" />
       </a>
