@@ -12,8 +12,8 @@
     </div>
     <div class="absolute z-[5] top-0 left-0 w-full h-full flex items-center justify-center pointer-none:">
       <RouterLink to="/" name="home" aria-label="Home">
-        <div class="nfs-logo full w-[170px] h-[44px] pointer-events-auto hidden lg:block"></div>
-        <div class="nfs-logo mob h-[32px] aspect-square pointer-events-auto block lg:hidden"></div>
+        <div alt="New Faro Sport Logo" class="nfs-logo full w-[170px] h-[44px] pointer-events-auto hidden lg:block"></div>
+        <div alt="New Faro Sport Logo" class="nfs-logo mob h-[32px] aspect-square pointer-events-auto block lg:hidden"></div>
       </RouterLink>
     </div>
     <div class="relative z-[10] flex lg:px-[16px] gap-[24px] items-center justify-end">

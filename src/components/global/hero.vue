@@ -2,12 +2,18 @@
   <div class="relative z-10 w-full h-svh bg-black">
     <div class="absolute z-[5] top-0 left-0 w-full h-full lg:px-[90px] px-[32px] flex items-center">
       <h1 class="text-white lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-bold break-all">
-        <p v-if="home">Sport.<br />Passione.<br />Divertimento.</p>
-        <p v-else>{{ text }}</p>
+        <template v-if="home">Sport.<br />Passione.<br />Divertimento.</template>
+        <template v-else>{{ text }}</template>
       </h1>
     </div>
     <div class="hero-bg relative z-[2] w-full h-full">
-      <img :src="heroImage" alt="hero bg" loading="eager" rel="preload" class="w-full h-full object-cover object-[95%_50%]" />
+      <img
+        :src="heroImage"
+        :alt="home ? 'New Faro Sport - Centro Sportivo a Taranto' : text"
+        loading="eager"
+        rel="preload"
+        class="w-full h-full object-cover object-[95%_50%]"
+      />
     </div>
     <div class="absolute z-[7] bottom-5 left-0 w-full flex items-center justify-center">
       <div class="scroll-down h-11 aspect-square flex items-center justify-center" :class="{ animate: isAnimating }">
